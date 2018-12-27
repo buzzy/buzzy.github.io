@@ -32,7 +32,7 @@ let food = {
 
 let score = 0;
 let levelCounter = 1;
-let level = "Level"
+let level = "Level";
 
 //control the snake
 
@@ -148,12 +148,12 @@ function draw() {
   ctx.font = "45px Changa one";
   ctx.fillText(speedCounter, 17 * box, 1.6 * box);
 
-  setTimeout(draw, timing)
+  game = setTimeout(draw, timing);
 
 }
 
 // spped counter
-let speed = "Speed"
+let speed = "Speed";
 let speedCounter = 0;
 
 // call draw function
