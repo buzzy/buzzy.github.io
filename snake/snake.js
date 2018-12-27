@@ -3,6 +3,8 @@ const ctx = cvs.getContext("2d");
 
 // create the unit
 const box = 32;
+const boardX = 17;
+const boardY = 15;
 
 // load images
 
@@ -17,15 +19,15 @@ foodImg.src = "./food.png";
 let snake = [];
 
 snake[0] = {
-  x: Math.floor(Math.random() * 17 + 1) * box,
-  y: Math.floor(Math.random() * 15 + 3) * box
+  x: Math.floor(Math.random() * boardX + 1) * box,
+  y: Math.floor(Math.random() * boardY + 3) * box
 };
 
 // create the food
 
 let food = {
-  x: Math.floor(Math.random() * 17 + 1) * box,
-  y: Math.floor(Math.random() * 15 + 3) * box
+  x: Math.floor(Math.random() * boardX + 1) * box,
+  y: Math.floor(Math.random() * boardY + 3) * box
 }
 
 // create the score var and level
@@ -102,8 +104,8 @@ function draw() {
     }
 
     food = {
-      x: Math.floor(Math.random() * 17 + 1) * box,
-      y: Math.floor(Math.random() * 15 + 3) * box
+      x: Math.floor(Math.random() * boardX + 1) * box,
+      y: Math.floor(Math.random() * boardY + 3) * box
     }
     // we don't remove the tail
   } else {
@@ -121,7 +123,12 @@ function draw() {
   // game over
 
   console.log(snakeX, snakeY);
-  if (snakeX < box || snakeX > 18 * box || snakeY < 2 * box || snakeY > 18 * box || collision(newHead, snake)) return;
+  //snakeX < 0
+  //snakeY < 64 - 32
+  //snakeX
+
+
+  if (snakeX < box || snakeX > boardX * box || snakeY < 2 * box || snakeY > boardY * box || collision(newHead, snake)) return;
 
   snake.unshift(newHead);
 
