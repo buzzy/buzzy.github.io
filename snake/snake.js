@@ -120,9 +120,7 @@ function draw() {
 
   // game over
 
-  if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) {
-    clearTimeout(game);
-  }
+  if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) return;
 
   snake.unshift(newHead);
 
@@ -158,4 +156,4 @@ let speedCounter = 0;
 
 // call draw function
 let timing = 400;
-game = setTimeout(draw, timing);
+setTimeout(draw, timing);
