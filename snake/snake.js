@@ -158,4 +158,4 @@ let speedCounter = 0;
 
 // call draw function
 let timing = 400;
-let game = setTimeout(draw, timing);
+game = setTimeout(draw, timing);
