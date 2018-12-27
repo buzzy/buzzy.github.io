@@ -120,7 +120,7 @@ function draw() {
 
   // game over
 
-  if (snakeX < box || snakeX > 18 * box || snakeY < 3 * box || snakeY > 18 * box || collision(newHead, snake)) return;
+  if (snakeX < box || snakeX > 18 * box || snakeY < 2 * box || snakeY > 18 * box || collision(newHead, snake)) return;
 
   snake.unshift(newHead);
 
