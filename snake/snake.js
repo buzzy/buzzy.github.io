@@ -120,7 +120,10 @@ function draw() {
 
   // game over
 
-  if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) return;
+  if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) {
+    console.log("EXIT!");
+    return;
+  }
 
   snake.unshift(newHead);
 
@@ -146,7 +149,7 @@ function draw() {
   ctx.font = "45px Changa one";
   ctx.fillText(speedCounter, 17 * box, 1.6 * box);
 
-  game = setTimeout(draw, timing);
+  setTimeout(draw, timing);
 
 }
 
