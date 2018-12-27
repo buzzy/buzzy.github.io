@@ -128,7 +128,7 @@ function draw() {
   //snakeX
 
 
-  if (snakeX < box || snakeX > boardX * box || snakeY < 2 * box || snakeY > boardY * box || collision(newHead, snake)) return;
+  if (snakeX < box || snakeX > (boardX+1) * box || snakeY < 2 * box || snakeY > boardY * box || collision(newHead, snake)) return;
 
   snake.unshift(newHead);
 
