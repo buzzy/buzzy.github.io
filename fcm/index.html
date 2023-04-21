@@ -33,7 +33,7 @@ const messaging = getMessaging(app);
 Notification.requestPermission().then((permission) => {
   if (permission === "granted") {
     // Get the device token
-    getToken(messaging, { vapidKey: "YOUR_VAPID_KEY" }).then((token) => {
+    getToken(messaging, { vapidKey: "BJkL4KOWLEBaK0Cj4xmXv-gszZVQmvapEfE7gGAwtOeggxSGxbrbch0JnNJBpCGwgZak8SSx9zUlwDGeR73Lcik" }).then((token) => {
       console.log("Device token:", token);
     }).catch((error) => {
       console.error("Error getting device token:", error);
